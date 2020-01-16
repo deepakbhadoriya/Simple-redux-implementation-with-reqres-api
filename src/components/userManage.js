@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Login from "./auth/login";
 import RegisterUser from "./auth/registerUser";
+import ReduxState from "./reduxState";
 
 class UserManage extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class UserManage extends Component {
   render() {
     return (
       <div>
+        <ReduxState></ReduxState>
         <Login></Login>
         <RegisterUser></RegisterUser>
       </div>

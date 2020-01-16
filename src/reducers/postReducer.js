@@ -1,10 +1,11 @@
-import { LOGIN_USER, REGISTER_USER } from "../actions/types";
+import { LOGIN_USER, REGISTER_USER, ERROR } from "../actions/types";
 
 const initialState = {
   loginToken: null,
   registerToken: null,
   registerId: null,
-  alert: null
+  alert: null,
+  error: null
 };
 
 export default function(state = initialState, action) {
@@ -22,6 +23,12 @@ export default function(state = initialState, action) {
         registerId: action.payload.id,
         alert: 2
       };
+    case ERROR: {
+      return {
+        ...state,
+        error: action.payload
+      };
+    }
     default:
       return state;
   }
